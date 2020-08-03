@@ -37,7 +37,7 @@ Object.defineProperty(String.prototype, 'isEmpty', {
     }
 });
 
-/* Check if the string is uppercase */
+/* Check if the string is lowercase */
 Object.defineProperty(String.prototype, 'isLowercase', {
     value: function() {
         return this == this.toLowerCase();
@@ -129,7 +129,7 @@ Object.defineProperty(String.prototype, 'truncate', {
 });
 
 /* Get array of words in a string */
-Object.defineProperty(String.prototype, 'normalizeSpaces', {
+Object.defineProperty(String.prototype, 'words', {
     value: function() {
         return this.split(" ");
     }

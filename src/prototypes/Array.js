@@ -115,6 +115,7 @@ Object.defineProperty(Array.prototype, 'union', {
     }
 });
 
+/* Create an array from the unique values of the original array */
 Object.defineProperty(Array.prototype, 'unique', {
     value: function() {
         return this.filter((v, i, a) => a.indexOf(v) === i);

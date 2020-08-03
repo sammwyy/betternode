@@ -3,7 +3,7 @@ Object.defineProperty(Number.prototype, 'clamp', {
     value: function(min, max) {
         if (this < min) return min;
         if (this > max) return max;
-        return this;
+        return this + 0;
     }
 });
 
@@ -14,7 +14,7 @@ Object.defineProperty(Number.prototype, 'cos', {
     }
 });
 
-/* Return true if the number is event */
+/* Return true if the number is even */
 Object.defineProperty(Number.prototype, 'isEven', {
     value: function() {
         return (this % 2) == 0;
@@ -36,7 +36,7 @@ Object.defineProperty(Number.prototype, 'percentage', {
     }
 });
 
-/* Return true if the number is event */
+/* Pow a number y a exponent */
 Object.defineProperty(Number.prototype, 'pow', {
     value: function(by = 2) {
         return Math.pow(by, this);
