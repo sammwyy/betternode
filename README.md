@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sammwyy/betterjs/master/docs/icon.png" width="100px">
-  <h1 align="center">Better.js</h1>
+  <img src="https://raw.githubusercontent.com/sammwyy/betternode/master/docs/icon.png" width="100px">
+  <h1 align="center">BetterNode</h1>
 </p>
 
 - [Installation](#installation) 
