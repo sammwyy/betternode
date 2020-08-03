@@ -6,6 +6,7 @@
 - [Installation](#installation) 
 - [Arrays](#arrays) 
 - [Numbers](#numbers) 
+- [Objects](#object) 
 - [Strings](#strings) 
 
 ## Installation
@@ -198,6 +199,21 @@ Returns the tan of a number
 let number = 6;
 console.log(number.tan()); // Output: -0.29100619138474915
 ```
+
+## Objects
+**1. Get Field**  
+Finds a field in the object with a string and returns the result  
+```javascript
+let obj = {
+  "a": {
+    "b": {
+      "c": "Hello world"
+    }
+  }
+}
+```
+
+console.log(obj.getField("a.b.c")); // Output: Hello world
 
 ## Strings
 **1. Capitalize**  
