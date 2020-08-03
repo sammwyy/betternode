@@ -4,6 +4,8 @@
 </p>
 
 - [Installation](#installation) 
+- [Arrays](#arrays) 
+- [Numbers](#numbers) 
 
 ## Installation
 Import is as any other library.  
@@ -11,6 +13,122 @@ Import is as any other library.
 require("betterjs");
 ```
 Yes. That's it all.  
+
+## Arrays
+**1. Chunk**  
+Split an array of element in to groups with the same size.  
+```javascript
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(arr.chunk(2)); // Output: [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ], [ 9, 10 ] ]
+console.log(arr.chunk(3)); // Output: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ], [ 10 ] ]
+console.log(arr.chunk(4)); // Output: [ [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ], [ 9, 10 ] ]
+```
+
+**2. Compact**  
+Remove all falsey values from an array  
+```javascript
+let arr = [1, false, 3, null, "5", 0, 7, "text"]
+console.log(arr.compact()); // Output: [ 1, 3, '5', 7 ]
+```
+
+**3. Difference**  
+Creates an array of values not included in the other given array  
+```javascript
+let arr1 = [1, 2, 4, 5];
+let arr2 = [1, 3, 5, 6];
+
+console.log(arr1.difference(arr2)); // Output: [ 2, 4 ]
+```
+
+**4. Drop**
+Slice an array in the specified position from the beginning  
+```javascript
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(arr.drop(1)); // Output: [ 2, 3, 4, 5, 6, 7, 8 ]
+console.log(arr.drop(2)); // Output: [ 3, 4, 5, 6, 7, 8 ]
+console.log(arr.drop(3)); // Output: [ 4, 5, 6, 7, 8 ]
+```
+
+**5. Drop Right**  
+Slice an array in the specified position from the end  
+```javascript
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(arr.dropRight(1)); // Output: [ 1, 2, 3, 4, 5, 6, 7 ]
+console.log(arr.dropRight(2)); // Output: [ 1, 2, 3, 4, 5, 6 ]
+console.log(arr.dropRight(3)); // Output: [ 1, 2, 3, 4, 5 ]
+```
+
+**6. DropIf**  
+ Remove an item of the array if the condition is true  
+ ```javascript
+ let arr = ["rock", "plane", "apple", "rise", "banana", "red"];
+
+console.log(arr.dropIf((item) => {
+    return item.startsWith("r"); // Output: [ 'plane', 'apple', 'banana' ]
+}))
+```
+
+**7. First**  
+Get the first element of the array  
+```javascript
+let arr = ["blue", "green", "red", "yellow"]
+console.log(arr.first()); // Output: blue
+```
+
+**8. Last**  
+Get the last element of the array  
+```javascript
+let arr = ["blue", "green", "red", "yellow"]
+console.log(arr.last()); // Output: yellow
+```
+
+**9. Remove**  
+Removes an object from the array  
+```javascript
+let arr = ["blue", "green", "red", "yellow"]
+console.log(arr.remove("green")); // Output: ["blue", "red", "yellow"]
+```
+
+**10. Take**
+Take values from the array starting at the specified position from the beginning  
+```javascript
+let arr = ["rock", "plane", "apple", "rise", "banana", "red"];
+console.log(arr.take(2)); // Output: [ 'rock', 'plane' ]
+```
+
+**11. Take Right**  
+Take values from the array starting at the specified position from the end
+```javascript
+let arr = ["rock", "plane", "apple", "rise", "banana", "red"];
+console.log(arr.takeRight(2)); // Output: [ 'banana', 'red' ]
+```
+
+**12. Take If**  
+Take elements of an array from the beginning while the callback condition is true  
+```javascript
+ let arr = ["rock", "plane", "apple", "rise", "banana", "red"];
+
+console.log(arr.takeIf((item) => {
+    return item.startsWith("r"); // Output: [ 'rock', 'rise', 'red' ]
+}))
+```
+
+**13. Union**  
+Create an array of unique values from other or multiple arrays  
+```javascript
+let arr = ["airplane", "bed", "cow", "dog"];
+let arr2 = ["pig", "apple", "dog", "apple"];
+
+console.log(arr.union(arr2)); // Output: [ 'airplane', 'bed', 'cow', 'dog', 'pig', 'apple' ]
+```
+
+**14. Unique**  
+Create an array from the unique values of the original array  
+```javascript
+let arr = [1, 2, 1, 3, 4, 5, 3, 6, 2];
+
+console.log(arr.unique()); // Output: [ 1, 2, 3, 4, 5, 6 ]
+```
 
 ## Numbers
 **1. Clamp**  
