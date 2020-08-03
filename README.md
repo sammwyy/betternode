@@ -211,9 +211,9 @@ let obj = {
     }
   }
 }
-```
 
 console.log(obj.getField("a.b.c")); // Output: Hello world
+```
 
 ## Strings
 **1. Capitalize**  
