@@ -12,7 +12,7 @@
 ## Installation
 Import is as any other library.  
 ```javascript
-require("betterjs");
+require("betternode");
 ```
 Yes. That's it all.  
 
