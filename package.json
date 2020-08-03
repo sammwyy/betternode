@@ -1,0 +1,11 @@
+{
+  "name": "betterjs",
+  "version": "1.0.0",
+  "description": "common and practical utilities for nodejs",
+  "main": "./src",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
