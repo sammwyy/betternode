@@ -6,6 +6,7 @@
 - [Installation](#installation) 
 - [Arrays](#arrays) 
 - [Numbers](#numbers) 
+- [Strings](#strings) 
 
 ## Installation
 Import is as any other library.  
@@ -196,4 +197,123 @@ Returns the tan of a number
 ```javascript
 let number = 6;
 console.log(number.tan()); // Output: -0.29100619138474915
+```
+
+## Strings
+**1. Capitalize**  
+Capitalize the first character of the string  
+```javascript
+let str = "hello my friend";
+console.log(str.capitalize()); // Output: Hello my friend
+```
+
+**2. Capitalize All**  
+Set all characters to lowercase except first character of each word  
+```javascript
+let str = "hello my friend";
+console.log(str.capitalizeAll()); // Output: Hello My Friend
+```
+
+**3. Escape HTML**  
+Escapes HTML string  
+```javascript
+let str = "<a>Hello & Welcome</a>";
+console.log(str.escapeHTML()); // Output: &lt;a&gt;Hello &amp; Welcome&lt;/a&gt;
+```
+
+**4. Is Empty**
+Returns true if string is empty or whitespaces  
+```javascript
+let str = "";
+console.log(str.isEmpty()); // Output: true
+```
+
+**5. Is Lowercase**  
+Check if the string is uppercase  
+```javascript
+let str = "hello";
+console.log(str.isLowerCase()); // Output: true
+
+let str2 = "Hello";
+console.log(str2.isLowerCase()); // Output: false
+```
+
+**6. Is Uppercase**  
+Check if the string is uppercase  
+```javascript
+let str = "HELLO";
+console.log(str.isUpperCase()); // Output: true
+
+let str2 = "HELLo";
+console.log(str2.isUpperCase()); // Output: false
+```
+
+**7. Print**  
+Log in the console a string  
+```javascript
+let str = "hello world";
+str.log(); // Output: hello world
+```
+
+**8. Normalize Spaces**  
+Normalize doublespaces  
+```javascript
+let str = "hello    world  to    my friends !";
+console.log(str.normalizeSpaces()); // Output: "hello world to my friends !"
+```
+
+**9. Replace All**  
+Replace all in a string  
+```javascript
+let str = "the car is red, red is the car";
+console.log(str.replace("red, "blue"); // Output: the car is blue, red is the car
+console.log(str.replaceAll("red, "blue"); // Output: the car is blue, blue is the car
+```
+
+**10. To Bool**  
+Parse to Boolean a string  
+```javascript
+let str = "true";
+console.log(str.toBool()); // Output: true;
+
+let str2 = "false";
+console.log(str2.toBool()); // Output: false;
+
+let str3 = "a text";
+console.log(str3.toBool()); // Output: null;
+```
+
+**11. To Float**  
+Parse to Float a string  
+```javascript
+let str = "3.141592";
+console.log(str.toFloat()); // Output: 3.141592
+```
+
+**12. To Integer**  
+Parse to Integer a string  
+```javascript
+let str = "45";
+console.log(str.toInt()); // Output: 45
+```
+
+**13. To JSON**  
+Parse to JSON a string  
+```javascript
+let str = "{\"hello\": \"world\"}";
+console.log(str.toJSON()); // Output: { hello: 'world' }
+```
+
+**14. Truncate**  
+Truncate a text and make it more shortly  
+```javascript
+let str = "hello world";
+console.log(str.truncate(7)); // Output: hello w...
+```
+
+**15. Words**  
+Get array of words in a string  
+```javascript
+let str = "the apple is red";
+console.log(str.words()); // Output: ["the", "apple", "is", "red"]
 ```
